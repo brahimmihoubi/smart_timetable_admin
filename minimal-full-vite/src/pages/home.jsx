@@ -5,9 +5,9 @@ import { HomeView } from 'src/sections/home/view';
 // ----------------------------------------------------------------------
 
 const metadata = {
-  title: 'Minimals UI: The starting point for your next project',
+  title: 'Smart Timetable Admin: Optimized Academic Scheduling',
   description:
-    'The starting point for your next project with Minimal UI Kit, built on the newest version of Material-UI ©, ready to be customized to your style',
+    'Powerful administrative dashboard for managing courses, teachers, and rooms with automated scheduling and real-time conflict detection.',
 };
 
 export default function Page() {

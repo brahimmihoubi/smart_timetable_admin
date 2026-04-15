@@ -7,11 +7,11 @@ import { useTheme } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 
 import { paths } from 'src/routes/paths';
+import { RouterLink } from 'src/routes/components';
 
 import { CONFIG } from 'src/config-global';
 import { varAlpha, textGradient } from 'src/theme/styles';
 
-import { Iconify } from 'src/components/iconify';
 import { SvgColor } from 'src/components/svg-color';
 import { varFade, MotionViewport } from 'src/components/animate';
 
@@ -66,11 +66,10 @@ export function HomeAdvertisement({ sx, ...other }) {
             color="primary"
             size="large"
             variant="contained"
-            target="_blank"
-            rel="noopener"
-            href={paths.minimalStore}
+            component={RouterLink}
+            href={paths.dashboard.root}
           >
-            Purchase now
+            Sign up now
           </Button>
         </m.div>
 
@@ -79,17 +78,15 @@ export function HomeAdvertisement({ sx, ...other }) {
             color="inherit"
             size="large"
             variant="outlined"
-            target="_blank"
-            rel="noopener"
-            href={paths.freeUI}
-            endIcon={<Iconify width={16} icon="eva:external-link-fill" sx={{ mr: 0.5 }} />}
+            component={RouterLink}
+            href={paths.dashboard.root}
             sx={{
               color: 'common.white',
               borderColor: 'common.white',
               '&:hover': { borderColor: 'currentColor' },
             }}
           >
-            Get free version
+            Get started
           </Button>
         </m.div>
       </Stack>
@@ -99,9 +96,7 @@ export function HomeAdvertisement({ sx, ...other }) {
   const renderImg = (
     <m.div variants={varFade().inUp}>
       <Box
-        component={m.img}
-        animate={{ y: [-20, 0, -20] }}
-        transition={{ duration: 4, repeat: Infinity }}
+        component="img"
         alt="rocket"
         src={`${CONFIG.site.basePath}/assets/illustrations/illustration-rocket-large.webp`}
         sx={{ zIndex: 9, width: 360, aspectRatio: '1/1' }}

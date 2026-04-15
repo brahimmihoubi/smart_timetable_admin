@@ -9,12 +9,12 @@ export function SignInButton({ sx, ...other }) {
   return (
     <Button
       component={RouterLink}
-      href={paths.auth.jwt.signIn}
+      href={paths.dashboard.root}
       variant="outlined"
       sx={sx}
       {...other}
     >
-      Sign in
+      Sign up
     </Button>
   );
 }

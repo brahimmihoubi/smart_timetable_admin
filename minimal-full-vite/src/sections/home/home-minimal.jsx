@@ -31,9 +31,9 @@ export function HomeMinimal({ sx, ...other }) {
   const renderDescription = (
     <>
       <SectionTitle
-        caption="Visualizing Success"
-        title="What's in"
-        txtGradient="Minimal?"
+        caption="Scheduling Excellence"
+        title="Why use"
+        txtGradient="Smart Timetable?"
         sx={{ mb: { xs: 5, md: 8 }, textAlign: { xs: 'center', md: 'left' } }}
       />
 
@@ -135,17 +135,17 @@ export function HomeMinimal({ sx, ...other }) {
 const ITEMS = [
   {
     icon: `${CONFIG.site.basePath}/assets/icons/home/ic-make-brand.svg`,
-    title: 'Branding',
-    description: 'Consistent design makes it easy to brand your own.',
+    title: 'Smart Generation',
+    description: 'Create optimized timetables automatically based on custom constraints.',
   },
   {
     icon: `${CONFIG.site.basePath}/assets/icons/home/ic-design.svg`,
-    title: 'UI & UX design',
-    description: 'The kit is built on the principles of the atomic design system.',
+    title: 'Resource Management',
+    description: 'Easily manage teachers, rooms, and academic groups in one place.',
   },
   {
     icon: `${CONFIG.site.basePath}/assets/icons/home/ic-development.svg`,
-    title: 'Development',
-    description: 'Easy to customize and extend, saving you time and money.',
+    title: 'Conflict Detection',
+    description: 'Instant validation and reporting of scheduling conflicts and overlaps.',
   },
 ];

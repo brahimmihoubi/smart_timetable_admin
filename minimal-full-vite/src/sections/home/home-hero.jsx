@@ -70,27 +70,20 @@ export function HomeHero({ sx, ...other }) {
         }}
       >
         <Box component="span" sx={{ width: 1, opacity: 0.24 }}>
-          Boost your building
+          Smart & Automated
         </Box>
-        process with
+        Timetable
         <Box
-          component={m.span}
-          animate={{ backgroundPosition: '200% center' }}
-          transition={{
-            duration: 20,
-            ease: 'linear',
-            repeat: Infinity,
-            repeatType: 'reverse',
-          }}
+          component="span"
           sx={{
             ...textGradient(
-              `300deg, ${theme.vars.palette.primary.main} 0%, ${theme.vars.palette.warning.main} 25%, ${theme.vars.palette.primary.main} 50%, ${theme.vars.palette.warning.main} 75%, ${theme.vars.palette.primary.main} 100%`
+              `300deg, ${theme.vars.palette.primary.main} 0%, ${theme.vars.palette.warning.main} 100%`
             ),
-            backgroundSize: '400%',
             ml: { xs: 0.75, md: 1, xl: 1.5 },
+            fontWeight: 'bold',
           }}
         >
-          Minimal
+          Management
         </Box>
       </Box>
     </MInview>
@@ -106,7 +99,7 @@ export function HomeHero({ sx, ...other }) {
           [theme.breakpoints.up(lgKey)]: { fontSize: 20, lineHeight: '36px' },
         }}
       >
-        {`The starting point for your next project is based on MUI. \nEasy customization helps you build apps faster and better.`}
+        {`The ultimate platform for managing courses, teachers, and rooms with \nautomated scheduling and real-time conflict detection.`}
       </Typography>
     </MInview>
   );
@@ -141,14 +134,14 @@ export function HomeHero({ sx, ...other }) {
         <Stack alignItems="center" spacing={2.5}>
           <Button
             component={RouterLink}
-            href={paths.auth.jwt.signIn}
+            href={paths.dashboard.root}
             color="inherit"
             size="large"
             variant="contained"
             startIcon={<Iconify width={24} icon="iconoir:flash" />}
           >
             <span>
-              Sign in
+              Sign up
               <Box
                 component="small"
                 sx={{
@@ -278,12 +271,12 @@ export function HomeHero({ sx, ...other }) {
           }}
         >
           <Stack spacing={3} sx={{ textAlign: 'center' }}>
-            <m.div style={{ y: y1 }}>{renderHeading}</m.div>
-            <m.div style={{ y: y2 }}>{renderText}</m.div>
+            <div>{renderHeading}</div>
+            <div>{renderText}</div>
           </Stack>
-          <m.div style={{ y: y3 }}>{renderRatings}</m.div>
-          <m.div style={{ y: y4 }}>{renderButtons}</m.div>
-          <m.div style={{ y: y5 }}>{renderIcons}</m.div>
+          <div>{renderRatings}</div>
+          <div>{renderButtons}</div>
+          <div>{renderIcons}</div>
         </Container>
 
         <HeroBackground />

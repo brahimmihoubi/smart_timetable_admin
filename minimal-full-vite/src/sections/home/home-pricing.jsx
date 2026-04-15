@@ -11,6 +11,7 @@ import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 
 import { paths } from 'src/routes/paths';
+import { RouterLink } from 'src/routes/components';
 
 import { useTabs } from 'src/hooks/use-tabs';
 
@@ -251,11 +252,10 @@ function PlanCard({ plan, sx, ...other }) {
           variant={plusLicense ? 'contained' : 'outlined'}
           color="inherit"
           size="large"
-          target="_blank"
-          rel="noopener"
-          href={paths.minimalStore}
+          component={RouterLink}
+          href={paths.dashboard.root}
         >
-          Get started
+          Sign up
         </Button>
       </m.div>
     </Stack>

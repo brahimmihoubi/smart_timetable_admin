@@ -17,6 +17,8 @@ import { RouterLink } from 'src/routes/components';
 
 import { useBoolean } from 'src/hooks/use-boolean';
 
+import { CONFIG } from 'src/config-global';
+
 import { Iconify } from 'src/components/iconify';
 import { Form, Field } from 'src/components/hook-form';
 
@@ -76,7 +78,7 @@ export function JwtSignUpView() {
       });
       await checkUserSession?.();
 
-      router.refresh();
+      router.push(CONFIG.auth.redirectPath);
     } catch (error) {
       console.error(error);
       setErrorMsg(error instanceof Error ? error.message : error);

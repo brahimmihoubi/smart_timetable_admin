@@ -1,4 +1,4 @@
-import { m } from 'framer-motion';
+// ----------------------------------------------------------------------
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -62,14 +62,12 @@ export function HeroBackground({ sx }) {
       {upMd && <Texts />}
 
       <Box
-        component={m.svg}
+        component="svg"
         xmlns="http://www.w3.org/2000/svg"
         width="1440"
         height="1080"
         fill="none"
         viewBox="0 0 1440 1080"
-        initial="hidden"
-        animate="visible"
         sx={{ width: 1, height: 1 }}
       >
         <defs>
@@ -98,9 +96,6 @@ export function HeroBackground({ sx }) {
       </Box>
 
       <Box
-        component={m.div}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
         sx={{
           top: 0,
           left: 0,
